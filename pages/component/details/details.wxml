@@ -1,0 +1,6 @@
+<text>{{obname}}</text>
+<text>{{obtitle}}</text>
+<image src='{{obimage}}'></image>
+<text>{{obcolor}}</text>
+<text>{{obprice}}</text>
+

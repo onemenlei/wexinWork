@@ -1,0 +1,72 @@
+<!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+<swiper indicator-dots="true" autoplay="true" duration="1000">
+  <!--swiper-item只能包含一个节点再多会自动删除-->
+  <swiper-item wx:for-items="{{munu}}" wx:key="id">
+    <image src="{{item.imageSrc}}" id="{{index}}" bindtap="urlto" />
+  </swiper-item>
+</swiper>
+<view class="title-view">
+  <view wx:if="{{hasLogin === true}}" class="title-text">
+    <view>
+      <wx-image src="{{userInfo.avatarUrl}}" class="title-text-image"></wx-image>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+    <text>
+      <text>1893</text>关注</text>
+  </view>
+  <view wx:if="{{hasLogin === true}}" class="title-text">
+    <view>
+      <wx-image src="../../../image/微信.png" class="inam-image"></wx-image>
+      <text class="inam-text">婴儿商城精选好物！</text>
+    </view>
+    <view>
+      <text class="inam-text">{{oiu}}</text>
+      <wx-image src="../../../image/电话.png" class="inam-image"></wx-image>
+    </view>
+  </view>
+  <view class="mmok-title">婴儿商城的精选好物，分期、定期优选高性价比产品。请关注“婴儿商城”，每周六晚8点准时开团！</view>
+  <view class="mmok-pzbz">
+    <view>
+      <image src="../../../image/交易担保.png" />
+      <text>担保交易</text>
+    </view>
+    <view>
+      <image src="../../../image/实名认证.png" />
+      <text>店长实名认证</text>
+    </view>
+    <view>
+      <image src="../../../image/七天无理由退换货.png" />
+      <text>七天退/换货</text>
+    </view>
+    <view>
+      <image src="../../../image/品质保障.png" />
+      <text>品质保证</text>
+    </view>
+  </view>
+</view>
+<image src="../../../image/home_line.jpg" class="line-image" />
+<view class='title-menu-text'><image src="../../../image/bear.png" />疯抢中</view>
+<view class="image-menu-view">
+  <navigator url='#'>
+  <view class="mask">21:45:09<b></b><b></b><b></b><b></b></view>
+    <image src="../../../image/index_title_img.jpg" />
+    <view class='image-menu-view-title'>
+    <view><text class="image-menu-view-text">帮宝适尿片超薄干爽透气NB96片帮宝适</text><text class='image-menu-view-Subtitle'>副标题</text></view>
+    <view><text class="image-menu-view-price">RMB 90.00</text><button class="image-menu-view-button">立即抢购</button></view>    
+    </view>
+  </navigator>
+</view>
+
+<view class='title-menu-text'><image src="../../../image/dog.png" />团购预告</view>
+<view class="image-menu-view">
+  <navigator url='#'>
+  <view class="mask">18:45开抢<b></b><b></b><b></b><b></b></view>
+    <image src="../../../image/index_title_img.jpg" />
+    <view class='image-menu-view-title'>
+    <view><text class="image-menu-view-text">帮宝适尿片超薄干爽透气NB96片帮宝适</text><text class='image-menu-view-Subtitle'>副标题</text></view>
+    <view><text class="image-menu-view-price">RMB 90.00</text><button class="image-menu-view-button gray">未开始</button></view>    
+    </view>
+  </navigator>
+</view>
+
+<image src="../../../image/yingerche.jpg" class='image-nobus' />

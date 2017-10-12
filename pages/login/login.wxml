@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <view class="row">
+            <text>姓 名：</text>
+            <input type="text" name="userName" placeholder="请输入用户名" value="{{userName}}" />
+        </view>
+        <view class="row">
+            <text>密 码：</text>
+            <input type="password" name="userPassword" placeholder="请输入密码" value="{{userPassword}}" />
+        </view>
+        <view class="row" style="justify-content: flex-end;align-items: flex-end;">
+            <button type="primary" form-type="submit">登陆</button>
+            <button bindtap="cleardata">清除数据</button>
+        </view>
+        <view style="display:flex;flex-direction:row;justify-content: center;">
+        布局教程：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+        http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+        <b>123</b>
+        <s>456</s>
+        <i>789</i>
+        <label>10</label>
+        </view>
+    </form>
+</view>

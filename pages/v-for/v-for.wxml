@@ -1,0 +1,25 @@
+<!--多层循环-->
+<view wx:for="{{items}}" wx:key="id" wx:for-item="isu" wx:for-id="index">
+  <view class="v-view" bindtap="vshow" id="{{index+1}}">{{index+1}}{{isu.objectname}}</view>
+  <view class="{{isShow != index ? 'hidden':''}}">
+  <navigator url="{{item.url}}" wx:for="{{isu.value}}" class="inline-view" wx:key="id" id="{{isu.objectname}}{{index+1}}">
+  <text>名字：{{item.name}}</text>
+  <text>实力：{{item.max}}</text>
+  </navigator>
+  </view>
+</view>
+<!--wx:key唯一标识符-->
+<view class="pad10" wx:for="{{twoList}}" wx:key="id">
+            <view>
+                {{index+1}}、{{item.name}}
+            </view>
+            <view wx:for="{{item.twodata}}" wx:for-item="twodata" wx:key="id">
+                ----{{twodata.name}}---{{item.name}}
+            </view>
+</view>
+
+<view wx:for="{{array}}" wx:key="id" hidden="{{flag ? true : false}}">
+{{index+1}}--{{item}}
+</view>
+
+<button id="001" value="me" bindtap='buts' class="buttons">点我</button>

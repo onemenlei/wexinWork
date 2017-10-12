@@ -1,0 +1,20 @@
+<view class="page">  
+  
+  <!--顶部导航栏-->  
+  <view class="swiper-tab">  
+    <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="tab-item {{currentTab==index ? 'on' : ''}}" data-current="0" bindtap="swichNav">{{item}}</view>   
+  </view>  
+  
+  <!--内容主体-->  
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">  
+    <swiper-item>  
+      <view>我是tab1</view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view>我是tab2</view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view>我是tab3</view>  
+    </swiper-item>  
+  </swiper>  
+</view>  

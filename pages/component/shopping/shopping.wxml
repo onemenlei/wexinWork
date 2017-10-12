@@ -1,0 +1,46 @@
+<!--货品-->
+<view wx:for="{{carts}}" wx:key="id">
+  <view class="order-object-main">
+    <!-- wx:if 是否选择显示不同图标 -->
+    <icon wx:if="{{item.selected}}" type="success" color="#ff275b" bindtap="selectList" data-index="{{index}}" />
+    <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" />
+    <!-- 点击商品图片可跳转到商品详情 -->
+    <navigator url="../details/details?id={{item.id}}">
+      <image src="{{item.image}}" class="imgsize" />
+    </navigator>
+    <view>
+      <text class='order-object-main-title'>{{item.title}}</text>
+      <text class='order-object-main-color'>颜色：{{item.color}}色</text>
+      <!-- 增加减少数量按钮 -->
+      <view class="num-button">
+        <text bindtap="minusCount" data-index="{{index}}">-</text>
+        <text>{{item.num}}</text>
+        <text bindtap="addCount" data-index="{{index}}">+</text>
+        <!-- 删除按钮 -->
+        <icon type="clear" bindtap="deleteList" data-index="{{index}}" style="float:right;" color="gray" />
+      </view>
+      <view class="order-object-main-price">
+        <text>单价：</text>
+        <text>￥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 底部操作栏 -->
+<view class="bottom-view">
+  <view>
+  <view>
+    <!-- wx:if 是否全选显示不同图标 -->
+    <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" bindtap="selectAll" class="iconself" />
+    <icon wx:else type="circle" bindtap="selectAll" class="iconself" />
+    <text>全选</text>
+    </view>
+    <view>
+    <!-- 总价 -->
+    <text>￥{{totalPrice}}</text>
+    <icon type='success' color="#fff" class="iconself" />
+    </view>
+  </view>
+</view>

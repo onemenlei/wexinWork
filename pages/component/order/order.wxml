@@ -1,0 +1,110 @@
+<view class="page">
+  <!--顶部导航栏-->
+  <view class="swiper-tab">
+    <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="tab-item {{currentTab==index ? 'on' : ''}}" data-current="0" bindtap="swichNav">{{item}}</view>
+  </view>
+
+  <!--内容主体-->
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <swiper-item>
+      <!--第二货品-->
+      <view>
+        <view class='order-object'>
+          <!--订单号/店名/状态-->
+          <view class="order-object-title">
+            <view class="order-object-title-left">
+              <view>
+                <image src="../../../image/bear.png" class="imagesize" />熊二商城
+              </view>
+              <text>订单编号：E20154121561231561</text>
+            </view>
+            <text class="order-object-title-right">已付款</text>
+          </view>
+          <!--货品-->
+          <view wx:for="{{goods}}" wx:key="id">
+            <view class="order-object-main">
+              <!-- 点击商品图片可跳转到商品详情 -->
+              <navigator url="../details/details?id={{item.id}}">
+                <image src="{{item.image}}" class="imgsize" />
+              </navigator>
+              <view>
+                <text class='order-object-main-title'>{{item.title}}</text>
+                <text class='order-object-main-color'>颜色：{{item.color}}色</text>
+                <view class="order-object-main-price">
+                  <text>X{{item.num}} </text>
+                  <text>￥{{item.price}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <!--结算-->
+          <view class='order-object-sum'>
+            <view>
+              <text>共2件</text>
+              <text>总计 <text class="order-object-title-right">￥{{totalPrice}}</text></text>
+            </view>
+            <view>
+              <button bindtap="getTotalPrice">查看物流</button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!--第三货品-->
+      <view>
+        <view class='order-object'>
+          <!--订单号/店名/状态-->
+          <view class="order-object-title">
+            <view class="order-object-title-left">
+              <view>
+                <image src="../../../image/dog.png" class="imagesize" />熊三商城
+              </view>
+              <text>订单编号：E204353636731</text>
+            </view>
+            <text class="order-object-title-right">已付款</text>
+          </view>
+          <!--货品-->
+          <view wx:for="{{result}}" wx:key="id">
+            <view class="order-object-main">
+              <!-- 点击商品图片可跳转到商品详情 -->
+              <navigator url="../details/details?id={{item.id}}">
+                <image src="{{item.image}}" class="imgsize" />
+              </navigator>
+              <view>
+                <text class='order-object-main-title'>{{item.title}}</text>
+                <text class='order-object-main-color'>颜色：{{item.color}}色</text>
+                <view class="order-object-main-price">
+                  <text>X{{item.num}} </text>
+                  <text>￥{{item.price}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <!--结算-->
+          <view class='order-object-sum'>
+            <view>
+              <text>共2件</text>
+              <text>总计 <text class="order-object-title-right">￥{{totalPrice}}</text></text>
+            </view>
+            <view>
+              <button>查看物流</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>我是tab2</view>
+    </swiper-item>
+    <swiper-item>
+      <view>我是tab3</view>
+    </swiper-item>
+    <swiper-item>
+      <view>我是tab4</view>
+    </swiper-item>
+    <swiper-item>
+      <view>我是tab5</view>
+    </swiper-item>
+  </swiper>
+</view>

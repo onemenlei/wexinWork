@@ -1,0 +1,6 @@
+/* pages/v-for/v-for.wxss */
+.v-view{display: flex;border-bottom:1px solid #333;border-top:1px solid #f1f1f1;padding:8px;text-indent:8px;}
+.inline-view{display: flex;justify-content:space-between;font-size:16px;padding:6px;color:white;border-bottom:1px dashed #fff;background:#333}
+.hidden{display: none;}
+
+page{min-height:100%;}

@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <block wx:if="{{hasLogin === true}}">
+      <wx-image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></wx-image>
+        <text class="page-body-title">{{userInfo.nickName}} <text class="userinfo-nickname">已登录</text></text>
+        <text class="page-body-text">每个微信号仅需登录 1 次，后续每次进入页面即可根据微信 id 自动拉取用户信息</text>
+      </block>
+      <block wx:if="{{hasLogin === false}}">
+        <text class="page-body-text">请登录，每个微信号仅需登录一次</text>
+        <button class="page-body-button" type="primary" bindtap="login">微信登录</button>
+      </block>
+    </view>
+  </view>
+ <button wx:if="{{hasLogin === true}}" bindtap="clear" style="width:90%;text-align:center;margin-bottom:20rpx">用户登出</button>
+</view>

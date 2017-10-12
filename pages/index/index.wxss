@@ -1,0 +1,28 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;background:yellow;font-size: 48rpx;font-family: "微软雅黑";
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.gotest{
+  width:100%;background:greenyellow;text-align: center;display: block;margin:20rpx auto;color:#fff;font-weight: bolder; 
+}
+.gonewmat{
+  width:100%;background:yellow;text-align: center;display: block;margin:20rpx auto;color:gray;font-weight: bolder; padding:30rpx 0;
+}

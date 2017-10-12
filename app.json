@@ -1,0 +1,63 @@
+{
+  "pages": [ 
+    "pages/component/index/index",
+    "pages/component/shopping/shopping",
+    "pages/component/details/details",
+    "pages/tests/tests",  
+    "pages/sort/sort",    
+    "pages/component/order/order",  
+    "pages/component/login/login",    
+    "pages/index/index",
+    "pages/v-for/v-for",
+    "pages/checkbox/checkbox",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/newmain/newmain",
+    "pages/flex/flex",
+    "pages/scrollView/scrollView",
+    "pages/login/login",
+    "pages/swiperTab/swiperTab",
+    "pages/iffor/iffor"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "我的WeChat",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": "True"
+  },
+  "debug": true,
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#fd3e9d",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/component/index/index",
+        "iconPath": "image/首页  实心 (1).png",
+        "selectedIconPath": "image/首页  实心.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/component/order/order",
+        "iconPath": "image/订单 (1).png",
+        "selectedIconPath": "image/订单.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/component/shopping/shopping",
+        "iconPath": "image/购物车 (1).png",
+        "selectedIconPath": "image/购物车.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/component/login/login",
+        "iconPath": "image/客服 (1).png",
+        "selectedIconPath": "image/客服.png",
+        "text": "登录"
+      }
+    ]
+  }
+}

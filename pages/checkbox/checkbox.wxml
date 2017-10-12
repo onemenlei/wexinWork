@@ -1,0 +1,42 @@
+<!--pages/checkbox/checkbox.wxml-->
+<form>
+<!--checkbox-group就是一个checkbox组 有个监听事件bindchange，监听数据选中和取消-->
+<checkbox-group bindchange="listenCheckboxChange">
+<!--这里用label显示内容，for循环写法 wx:for-items 默认item为每一项-->
+    <label style="display: flex;"  wx:for-items="{{items}}">
+    <!--value值和默认选中状态都是通过数据绑定在js中的-->
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<!--button formType属性两个可选值submit, reset分别会触发form的submit，reser事件 -->
+    <button formType="submit" type="primary">提交</button>
+    <button formType="reset" type="warn">重置</button>
+
+    <!--style的优先级比class高会覆盖和class相同属性-->
+<view class="inputView" style="margin-top: 40% ">
+<input class="input" type="number" placeholder="请输入账号" placeholder-style="color: red" bindinput="listenerPhoneInput" />
+</view>
+
+<view class="inputView">
+<input class="input" password="true" placeholder="请输入密码" placeholder-style="color: red" bindinput="listenerPasswordInput"/>
+</view>
+
+
+<button style="margin-left: 15rpx; margin-right: 15rpx; margin-top: 50rpx; border-radius: 40rpx" type="primary" bindtap="listenerLogin">登录</button>
+
+<view>普通选择器</view>
+<!--mode默认selector range数据源value选择的index bindchange事件监听-->
+<picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+    <text>{{array[index]}}</text>
+</picker>
+
+<view>时间选择器</view>
+<picker mode="time" value="{{time}}" start="06:00" end="24:00" bindchange="listenerTimePickerSelected">
+    <text>{{time}}</text>
+</picker>
+
+<view>日期选择器</view>
+<picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
+    <text>{{date}}</text>
+</picker>
+ </form>   

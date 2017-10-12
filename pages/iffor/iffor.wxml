@@ -1,0 +1,15 @@
+<!--iffor.wxml-->
+<view class="classname">
+<text wx:if="{{moto=='Hello world!'}}">Hello world!</text>
+<text wx:else>no more {{moto}}</text>
+<button bindtap="motoTurn">click turn</button>
+</view>
+
+<view wx:for="{{arr1}}">
+{{index}}--{{item.name}}=={{item.age}}
+</view>
+
+<text>网络数据</text>
+<view wx:for="{{removeData}}">
+{{index}}--{{item.name}}
+</view>
